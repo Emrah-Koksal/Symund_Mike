@@ -85,12 +85,26 @@ public class LoginStepDefs {
 
     @When("User verifies and clicks on the -Forgot password?-")
     public void UserVerifiesAndClicksOnTheForgotPassword() {
-        Assert.assertTrue("Forgot Password is not displayed",loginPage.forgotPassword.isDisplayed());
+        Assert.assertTrue("Forgot Password is not displayed", loginPage.forgotPassword.isDisplayed());
         loginPage.forgotPassword.click();
     }
 
     @Then("User verifies Reset Password on the following page")
     public void userVerifiesResetPasswordOnTheFollowingPage() {
         Assert.assertTrue("Reset password is not displayed", loginPage.resetPassword.isDisplayed());
+    }
+
+    @Then("User verifies the placeholder on username text box")
+    public void userVerifiesThePlaceholderOnUsernameTextBox() {
+        String expectedPlaceholder = "Username or email";
+        String actualPlaceholder = loginPage.usernameBox.getAttribute("placeholder");
+        Assert.assertEquals("The placeholder does not match", expectedPlaceholder, actualPlaceholder);
+    }
+
+    @Then("User verifies the placeholder on password text box")
+    public void userVerifiesThePlaceholderOnPasswordTextBox() {
+        String expectedPlaceholder = "Password";
+        String actualPlaceholder = loginPage.passwordBox.getAttribute("placeholder");
+        Assert.assertEquals("The placeholder does not match", expectedPlaceholder, actualPlaceholder);
     }
 }
