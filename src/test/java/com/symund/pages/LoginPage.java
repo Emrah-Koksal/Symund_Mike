@@ -2,7 +2,6 @@ package com.symund.pages;
 
 import com.symund.utilities.BrowserUtils;
 import com.symund.utilities.ConfigurationReader;
-import com.symund.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 

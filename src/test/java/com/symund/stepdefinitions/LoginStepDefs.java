@@ -9,7 +9,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 
 public class LoginStepDefs {
@@ -107,4 +106,6 @@ public class LoginStepDefs {
         String actualPlaceholder = loginPage.passwordBox.getAttribute("placeholder");
         Assert.assertEquals("The placeholder does not match", expectedPlaceholder, actualPlaceholder);
     }
+
+
 }

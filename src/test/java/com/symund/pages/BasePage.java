@@ -12,6 +12,12 @@ public abstract class BasePage {
         PageFactory.initElements(Driver.get(),this);
     }
 
+    @FindBy(id = "expand")
+    public WebElement avatar;
+
+    @FindBy(xpath = "//li[@data-id='logout']/a")
+    public WebElement logout;
+
     @FindBy(css = ".app-icon")
     public WebElement moduleIcons;
 

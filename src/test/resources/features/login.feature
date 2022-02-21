@@ -7,7 +7,6 @@ Feature: Login Functionality
     When User logs in with valid credentials
     Then the "Dashboard - Symund - QA" should be displayed
 
-
   Scenario Outline: User can not login with any invalid credentials
     Given User is on the login page
     When User logs in with "<username>" and "<password>"
@@ -18,14 +17,12 @@ Feature: Login Functionality
       | invalidUsername | Employee123     |
       | Employee61      | invalidPassword |
       | invalidUsername | invalidPassword |
-      | employee61      | Employee123     |
-
+#      | employee61      | Employee123     |
 
   Scenario: User can not login with any invalid credentials
     Given User is on the login page
     When User logs in with "" and "Employee123"
     Then Please fill out this field. message should be displayed when username  is left empty
-
 
   Scenario: User can not login with any invalid credentials
     Given User is on the login page
