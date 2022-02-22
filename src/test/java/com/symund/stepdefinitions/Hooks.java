@@ -27,14 +27,4 @@ public class Hooks {
         Driver.closeDriver();
 
     }
-
-    @Before ("@db")
-    public void setUpdb(){
-        System.out.println("\tentering database...");
-    }
-
-    @After ("@db")
-    public void tearDowndb(){
-        System.out.println("\texiting from database...");
-    }
 }
