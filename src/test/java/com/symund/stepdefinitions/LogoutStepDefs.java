@@ -9,7 +9,7 @@ public class LogoutStepDefs {
     @When("User clicks on the avatar icon")
     public void userClicksOnTheAvatarIcon() {
 
-        BrowserUtils.waitFor(2);
+
         new LoginPage().avatar.click();
     }
 
