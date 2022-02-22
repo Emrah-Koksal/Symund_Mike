@@ -108,4 +108,9 @@ public class LoginStepDefs {
     }
 
 
+    @Then("Verify that password is in a form of dots by default")
+    public void verifyThatPasswordIsInAFormOfDotsByDefault() {
+        String actualPassword = new LoginPage().passwordBox.getAttribute("type");
+        Assert.assertEquals("Password is not seen in a form of dots", "password", actualPassword);
+    }
 }

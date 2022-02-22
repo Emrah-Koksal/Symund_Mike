@@ -31,6 +31,11 @@ Feature: Login Functionality
     When User logs in with "Employee61" and ""
     Then Please fill out this field. message should be displayed when password  is left empty
 
+  @SYMU-1064
+  Scenario: User can see the password in a form of dots by default
+    When User enters credentials of "Employee61" and "HiddenPassword"
+    Then Verify that password is in a form of dots by default
+
   @SYMU-1051
   Scenario: User can see the password explicitly if needed
     When User enters credentials of "Employee61" and "HiddenPassword"

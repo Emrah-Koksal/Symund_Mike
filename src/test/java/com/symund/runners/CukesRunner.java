@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/symund/stepdefinitions",
         dryRun = false,
-        tags = "@SYMU-1056"
+        tags = "@regression"
 )
 
 public class CukesRunner {

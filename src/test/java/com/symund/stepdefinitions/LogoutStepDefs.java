@@ -2,6 +2,7 @@ package com.symund.stepdefinitions;
 
 import com.symund.pages.LoginPage;
 import com.symund.utilities.BrowserUtils;
+import com.symund.utilities.Driver;
 import io.cucumber.java.en.When;
 
 public class LogoutStepDefs {
@@ -17,5 +18,10 @@ public class LogoutStepDefs {
     public void userClicksOnTheLogOutOptionFromTheDropdownMenu() {
         BrowserUtils.waitFor(1);
         new LoginPage().logout.click();
+    }
+
+    @When("User clicks step back button")
+    public void userClicksStepBackButton() {
+        Driver.get().navigate().back();
     }
 }
